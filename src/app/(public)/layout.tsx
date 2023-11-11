@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import '../globals.css'
 import { ClerkProvider } from '@clerk/nextjs'
+import { twMerge } from '@/utils/tailwind'
+import Header from '@/components/sections/Header'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,7 +20,10 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className={inter.className}>{children}</body>
+        <body className={twMerge(inter.className, "text-black")}>
+          <Header />
+          {children}
+        </body>
       </html>
     </ClerkProvider>
   )

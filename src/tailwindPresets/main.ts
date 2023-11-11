@@ -1,0 +1,55 @@
+import { Config } from "tailwindcss";
+import plugin from "tailwindcss/plugin"
+
+const preset: Partial<Config> = {
+  theme: {},
+  plugins: [
+    plugin(function ({ addBase, theme }) {
+      addBase({
+        body: {
+          fontFamily: theme("fontFamily.sans"),
+          fontSize: theme("fontSize.base"),
+          lineHeight: theme("lineHeight.base"),
+        },
+        h1: {
+          fontFamily: theme("fontFamily.sans"),
+          fontSize: theme("fontSize.5xl"),
+          fontWeight: theme("fontWeight.bold"),
+          lineHeight: theme("lineHeight.tight"),
+        },
+        h2: {
+          fontFamily: theme("fontFamily.sans"),
+          fontSize: theme("fontSize.4xl"),
+          fontWeight: theme("fontWeight.bold"),
+          lineHeight: theme("lineHeight.tight"),
+        },
+        h3: {
+          fontFamily: theme("fontFamily.sans"),
+          fontSize: theme("fontSize.3xl"),
+          fontWeight: theme("fontWeight.bold"),
+          lineHeight: theme("lineHeight.tight"),
+        },
+        h4: {
+          fontFamily: theme("fontFamily.sans"),
+          fontSize: theme("fontSize.2xl"),
+          fontWeight: theme("fontWeight.bold"),
+          lineHeight: theme("lineHeight.tight"),
+        },
+        h5: {
+          fontFamily: theme("fontFamily.sans"),
+          fontSize: theme("fontSize.xl"),
+          fontWeight: theme("fontWeight.bold"),
+          lineHeight: theme("lineHeight.tight"),
+        },
+        h6: {
+          fontFamily: theme("fontFamily.sans"),
+          fontSize: theme("fontSize.lg"),
+          fontWeight: theme("fontWeight.bold"),
+          lineHeight: theme("lineHeight.tight"),
+        },
+      });
+    })
+  ],
+}
+
+export default preset;
