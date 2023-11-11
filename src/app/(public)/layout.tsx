@@ -20,6 +20,9 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
+        <head>
+          <title>Homepage | Nirnama</title>
+        </head>
         <body className={twMerge(inter.className, "text-black")}>
           <Header />
           {children}
